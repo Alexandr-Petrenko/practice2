@@ -1,0 +1,29 @@
+$-vertical-padding: 60px;
+$-left-space: 230px;
+$-size-for-square: 191px;
+
+.employee {
+  position: relative;
+  display: inline-block;
+  margin-left: $-left-space;
+  padding: $-vertical-padding 0;
+
+  &:nth-child(odd) {
+    margin-right: 120px;
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    @include square($-size-for-square);
+    background: url("../images/charlie.png");
+
+    top: $-vertical-padding / 2;
+    left: -$-left-space;
+  }
+
+  &__name {
+    margin-bottom: 16px;
+  }
+}
