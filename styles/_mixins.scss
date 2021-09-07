@@ -1,0 +1,9 @@
+@mixin item-width($w: 100%, $left-padding: $-left-padding) {
+  width: $w;
+  padding-left: $left-padding;
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
