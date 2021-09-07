@@ -117,7 +117,8 @@ a {
           .section__item-normal:after {
             right: calc(50% - 228px / 2); } }
     .section__item--height-s {
-      padding-top: 344px; }
+      padding-top: 344px;
+      padding-bottom: 100px; }
   .section__heading {
     margin-bottom: 53px;
     font-weight: 800;
