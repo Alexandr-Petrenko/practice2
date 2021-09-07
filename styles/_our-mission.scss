@@ -1,0 +1,10 @@
+.our-mission {
+  height: 100%;
+  &__section {
+    background: url("../images/background-image.png") no-repeat center {
+      size: cover;
+    };
+
+    @include media-item-height(1100px, $-height-of-empty);
+  }
+}

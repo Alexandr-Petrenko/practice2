@@ -11,6 +11,7 @@ $-size-for-square: 191px;
 
   @media (max-width: 1100px) {
     width: 290px;
+    align-self: center;
   }
 
   &:nth-child(odd) {
