@@ -7,3 +7,14 @@
   width: $size;
   height: $size;
 }
+
+@mixin photo ($url) {
+  position: absolute;
+  content: '';
+  display: block;
+  @include square($-size-for-square);
+  background: $url;
+
+  top: $-vertical-padding / 2;
+  left: -$-left-space;
+}

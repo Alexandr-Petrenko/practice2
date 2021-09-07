@@ -67,6 +67,7 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important; } }
 body {
+  width: 100%;
   color: #4f4f4f;
   font-size: 48px;
   font-weight: normal;
@@ -82,7 +83,6 @@ a {
     .section {
       flex-direction: column; } }
   .section__item {
-    height: 1080px;
     background-color: #e5e5e5; }
     .section__item-small {
       width: 40%;
@@ -90,12 +90,20 @@ a {
       @media (max-width: 1100px) {
         .section__item-small {
           width: 100%;
-          padding-left: 140px; } }
+          padding-left: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center; } }
     .section__item-normal {
       position: relative;
       width: 60%;
       padding-left: 94px;
       padding-top: 147px; }
+      @media (max-width: 1100px) {
+        .section__item-normal {
+          width: 100%;
+          padding-left: 0;
+          text-align: center; } }
       .section__item-normal:after {
         position: absolute;
         content: '';
@@ -105,23 +113,29 @@ a {
         background: url("../images/logo.png") no-repeat center;
         top: 65px;
         right: 119px; }
-      @media (max-width: 1100px) {
-        .section__item-normal {
-          width: 100%;
-          padding-left: 140px; } }
-    .section__item--high-s {
+        @media (max-width: 1100px) {
+          .section__item-normal:after {
+            right: calc(50% - 228px / 2); } }
+    .section__item--height-s {
       padding-top: 344px; }
   .section__heading {
     margin-bottom: 53px;
-    font-size: 48px;
     font-weight: 800;
-    line-height: 65px; }
+    font-size: 72px;
+    line-height: 98px; }
+    @media (max-width: 1100px) {
+      .section__heading {
+        width: 100%;
+        text-align: center; } }
   .section__texts {
     margin-right: 5px; }
   .section__text {
-    margin-bottom: 100px;
-    font-size: 48px;
-    line-height: 65px; }
+    margin-bottom: 100px; }
+    @media (max-width: 1100px) {
+      .section__text {
+        width: 100%;
+        text-align: center;
+        padding: 0 5px; } }
     .section__text--small {
       max-width: 558px;
       font-size: 34px;
@@ -129,11 +143,21 @@ a {
 
 .contacts {
   margin-right: 40px; }
+  @media (max-width: 1100px) {
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 0; } }
   .contacts__item {
     position: relative;
     display: inline-block;
     margin: 0 40px 65px 100px;
     transition: .5s; }
+    @media (max-width: 1100px) {
+      .contacts__item {
+        text-align: left;
+        width: 350px; } }
     .contacts__item:hover {
       color: #2299ef;
       transition: .5s; }
@@ -149,24 +173,62 @@ a {
       content: '';
       top: 0;
       left: -100px; }
+      @media (max-width: 1100px) {
+        .contacts__item:after {
+          left: -100px; } }
 
 .cover-primary__section {
+  height: 1150px;
   background: #2299ef url("../images/iphone.png") no-repeat center; }
 
 .employee {
   position: relative;
   display: inline-block;
+  width: 260px;
   margin-left: 230px;
   padding: 60px 0; }
+  @media (max-width: 1100px) {
+    .employee {
+      width: 290px; } }
   .employee:nth-child(odd) {
-    margin-right: 120px; }
-  .employee:before {
+    margin-right: 70px; }
+    @media (max-width: 1100px) {
+      .employee:nth-child(odd) {
+        margin-right: 0; } }
+  .employee--charlie:before {
     position: absolute;
     content: '';
     display: block;
     width: 191px;
     height: 191px;
     background: url("../images/charlie.png");
+    top: 30px;
+    left: -230px; }
+  .employee--sandra:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 191px;
+    height: 191px;
+    background: url("../images/sandra.png");
+    top: 30px;
+    left: -230px; }
+  .employee--alta:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 191px;
+    height: 191px;
+    background: url("../images/alta.png");
+    top: 30px;
+    left: -230px; }
+  .employee--joe:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 191px;
+    height: 191px;
+    background: url("../images/joe.png");
     top: 30px;
     left: -230px; }
   .employee__name {

@@ -5,22 +5,44 @@ $-size-for-square: 191px;
 .employee {
   position: relative;
   display: inline-block;
+  width: 260px;
   margin-left: $-left-space;
   padding: $-vertical-padding 0;
 
-  &:nth-child(odd) {
-    margin-right: 120px;
+  @media (max-width: 1100px) {
+    width: 290px;
   }
 
-  &:before {
-    position: absolute;
-    content: '';
-    display: block;
-    @include square($-size-for-square);
-    background: url("../images/charlie.png");
+  &:nth-child(odd) {
+    margin-right: 70px;
 
-    top: $-vertical-padding / 2;
-    left: -$-left-space;
+    @media (max-width: 1100px) {
+      margin-right: 0;
+    }
+  }
+
+  &--charlie {
+    &:before {
+      @include photo(url("../images/charlie.png"));
+    }
+  }
+
+  &--sandra {
+    &:before {
+      @include photo(url("../images/sandra.png"));
+    }
+  }
+
+  &--alta {
+    &:before {
+      @include photo(url("../images/alta.png"));
+    }
+  }
+
+  &--joe {
+    &:before {
+      @include photo(url("../images/joe.png"));
+    }
   }
 
   &__name {
