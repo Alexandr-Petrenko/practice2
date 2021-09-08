@@ -41,3 +41,12 @@
     right: calc(50% - 228px / 2);
   }
 }
+
+@mixin section-bg($url) {
+  background: $url no-repeat center;
+}
+
+@mixin section-bg-cover($url) {
+  @include section-bg($url);
+  background-size: cover;
+}

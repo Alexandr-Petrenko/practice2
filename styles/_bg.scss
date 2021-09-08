@@ -2,10 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1920px;
   height: 1080px;
+  width: 100%;
+  margin-right: 0;
 
-  background: url("../images/background-image.png") no-repeat center {
-    size: cover;
-  };
+  @include section-bg-cover(url("../images/background-image.png"));
 }

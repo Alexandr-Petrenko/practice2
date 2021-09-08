@@ -1,9 +1,8 @@
 .cover-primary {
   &__section {
-    background: $-c-main-blue url("../images/iphone.png") no-repeat center;
-
-    @media (max-width: 1100px) {
-      height: 1080px;
-    }
+    @include section-bg(url("../images/iphone.png"));
+    background-color: $-c-main-blue;
+    height: 100%;
+    min-height: 1113px;
   }
 }
