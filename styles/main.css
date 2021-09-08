@@ -173,10 +173,20 @@ a {
 }
 .section__item--height-s {
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap;
   padding-top: 344px;
   padding-bottom: 100px;
+}
+@media (max-width: 1044px) {
+  .section__item--height-s {
+    justify-content: center;
+  }
+}
+@media (max-width: 560px) {
+  .section__item--height-s {
+    padding-top: 100px;
+  }
 }
 .section__heading {
   margin-bottom: 53px;
@@ -190,6 +200,11 @@ a {
     text-align: center;
   }
 }
+@media (max-width: 478px) {
+  .section__heading {
+    font-size: 40px;
+  }
+}
 .section__heading--margin-bottom__big {
   margin-bottom: 70px;
 }
@@ -199,7 +214,7 @@ a {
 }
 @media (max-width: 1100px) {
   .section__heading--main {
-    font-size: 50px;
+    padding: 0 5px;
   }
 }
 .section__subheading {
@@ -247,6 +262,14 @@ a {
     width: 350px;
   }
 }
+@media (max-width: 478px) {
+  .contacts__item {
+    margin: 0 0 80px 0;
+    width: 250px;
+    text-align: center;
+    font-size: 30px;
+  }
+}
 .contacts__item:hover {
   color: #2299ef;
   transition: 0.5s;
@@ -265,6 +288,12 @@ a {
   top: 0;
   left: -100px;
 }
+@media (max-width: 478px) {
+  .contacts__item:after {
+    top: 75px;
+    left: calc(50% - (70px / 2));
+  }
+}
 
 .cover-primary__section {
   background: url("../images/iphone.png") no-repeat center;
@@ -272,11 +301,17 @@ a {
   height: 100%;
   min-height: 1113px;
 }
+@media (max-width: 478px) {
+  .cover-primary__section {
+    background-size: contain;
+    min-height: 500px;
+  }
+}
 
 .employee {
   position: relative;
   display: inline-block;
-  width: 260px;
+  width: 290px;
   margin-left: 230px;
   padding: 60px 0;
 }
@@ -284,6 +319,11 @@ a {
   .employee {
     width: 290px;
     align-self: center;
+  }
+}
+@media (max-width: 560px) {
+  .employee {
+    margin: 0 0 250px 0;
   }
 }
 .employee:nth-child(odd) {
@@ -304,6 +344,12 @@ a {
   top: 30px;
   left: -230px;
 }
+@media (max-width: 560px) {
+  .employee--charlie:before {
+    top: 200px;
+    left: calc(50% - (191px / 2));
+  }
+}
 .employee--sandra:before {
   position: absolute;
   content: "";
@@ -313,6 +359,12 @@ a {
   background: url("../images/sandra.png");
   top: 30px;
   left: -230px;
+}
+@media (max-width: 560px) {
+  .employee--sandra:before {
+    top: 200px;
+    left: calc(50% - (191px / 2));
+  }
 }
 .employee--alta:before {
   position: absolute;
@@ -324,6 +376,12 @@ a {
   top: 30px;
   left: -230px;
 }
+@media (max-width: 560px) {
+  .employee--alta:before {
+    top: 200px;
+    left: calc(50% - (191px / 2));
+  }
+}
 .employee--joe:before {
   position: absolute;
   content: "";
@@ -333,6 +391,12 @@ a {
   background: url("../images/joe.png");
   top: 30px;
   left: -230px;
+}
+@media (max-width: 560px) {
+  .employee--joe:before {
+    top: 200px;
+    left: calc(50% - (191px / 2));
+  }
 }
 .employee__name {
   margin-bottom: 16px;

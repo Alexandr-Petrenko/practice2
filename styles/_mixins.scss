@@ -17,6 +17,11 @@
 
   top: $-vertical-padding / 2;
   left: -$-left-space;
+
+  @media (max-width: 560px) {
+    top: 200px;
+    left: calc(50% - (191px / 2));
+  }
 }
 
 @mixin media-item-height($max-width, $height){

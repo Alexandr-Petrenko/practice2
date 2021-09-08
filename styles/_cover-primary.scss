@@ -4,5 +4,10 @@
     background-color: $-c-main-blue;
     height: 100%;
     min-height: 1113px;
+
+    @media (max-width: 478px) {
+      background-size: contain;
+      min-height: 500px;
+    }
   }
 }
